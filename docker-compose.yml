@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+  ariana-discord-bot:
+    container_name: ariana-discord-bot
+    image: danielsoheil/ariana-discord-bot
+    build: .
+    environment:
+      DISCORD_TOKEN: ${DISCORD_TOKEN:?}
+      ARIANA_TOKEN: ${ARIANA_TOKEN:?}
+    logging:
+      options:
+        max-size: "4m"
+        max-file: "3"
