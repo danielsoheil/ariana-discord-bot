@@ -10,7 +10,7 @@ class SlashCommands(commands.Cog):
         self.bot = bot
 
     @nextcord.slash_command(force_global=True)
-    async def say(self, interaction: Interaction, message: str):
+    async def ariana(self, interaction: Interaction, message: str):
         try:
             vc: nextcord.VoiceClient = await interaction.user.voice.channel.connect()
         except nextcord.errors.ClientException:
